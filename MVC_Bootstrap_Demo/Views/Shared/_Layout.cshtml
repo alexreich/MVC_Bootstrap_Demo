@@ -1,0 +1,551 @@
+﻿@model InvoiceViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>@ViewData["Title"] - MVC_Bootstrap_Demo</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    @*<header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MVC_Bootstrap_Demo</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>*@
+    <!-- Nav bar-->
+    <nav class="navbar navbar-expand-sm navbar-styling">
+        <a class="navbar-brand" href="#">
+            <img src="~/img/image-1.png" class="company-logo ml-lg-5" />
+        </a>
+
+        <div class="collapse navbar-collapse">
+            <div id="title" class="navbar-nav mr-auto">
+                <span id="company-name" class="nav-item John-Doe-Manufacturi"> </span>
+            </div>
+        </div>
+
+        <div class="flex-column align-items-end">
+            <div class="dropdown nav-dropdown">
+                <button id="user-name"
+                        class="btn dropdown-toggle px-2 py-0"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-expanded="false"></button>
+            </div>
+
+            <span id="log-out"
+                  class="navbar-text ml-auto py-0 px-lg-2 mr-3 d-flex justify-content-end">Log Out</span>
+        </div>
+    </nav>
+
+    <!-- Everything below Nav -->
+    <div class="row mx-0 my-0">
+        <!-- Side bar -->
+        <nav class="col SideBar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="my-1">
+                        <div class="row mx-0 pt-0 py-1 py-sm-2">
+                            <div class="col-sm-3 px-0 text-center align-middle">
+                                <img class="sidebar-img"
+                                     src="img/navigationIcons/Hamburger.png" />
+                            </div>
+                            <div class="col-sm-9 px-0 align-middle"></div>
+                        </div>
+                    </li>
+                    <li class="my-1">
+                        <div class="row mx-0 pt-0 py-1 py-sm-2 active">
+                            <div class="col-sm-3 px-0 text-center align-middle">
+                                <img class="sidebar-img"
+                                     src="img/navigationIcons/SelectnPay.png" />
+                            </div>
+                            <div class="col-sm-9 px-0 align-middle">
+                                <a class="nav-link sidebar-text px-0 py-0 text-sm-left text-center"
+                                   href="#">
+                                    Select & Pay
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="my-1">
+                        <div class="row mx-0 pt-0 py-1 py-sm-2">
+                            <div class="col-sm-3 px-0 text-center align-middle">
+                                <img class="sidebar-img"
+                                     src="img/navigationIcons/QuickPayments.png" />
+                            </div>
+                            <div class="col-sm-9 px-0 align-middle">
+                                <a class="nav-link sidebar-text px-0 py-0 text-sm-left text-center"
+                                   href="#">
+                                    Quick Payment
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="my-1">
+                        <div class="row mx-0 pt-0 py-1 py-sm-2">
+                            <div class="col-sm-3 px-0 text-center align-middle">
+                                <img class="sidebar-img"
+                                     src="img/navigationIcons/AutoPayments.png" />
+                            </div>
+                            <div class="col-sm-9 px-0 align-middle">
+                                <a class="nav-link sidebar-text px-0 py-0 text-sm-left text-center"
+                                   href="#">
+                                    Auto Payments
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="my-1">
+                        <div class="row mx-0 pt-0 py-1 py-sm-2">
+                            <div class="col-sm-3 px-0 text-center align-middle">
+                                <img class="sidebar-img"
+                                     src="img/navigationIcons/Reports.png" />
+                            </div>
+                            <div class="col-sm-9 px-0 align-middle">
+                                <a class="nav-link sidebar-text px-0 py-0 text-sm-left text-center"
+                                   href="#">
+                                    Reports
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="my-1">
+                        <div class="row mx-0 pt-0 py-1 py-sm-2">
+                            <div class="col-sm-3 px-0 text-center align-middle">
+                                <img class="sidebar-img"
+                                     src="img/navigationIcons/MyAccount.png" />
+                            </div>
+                            <div class="col-sm-9 px-0 align-middle">
+                                <a class="nav-link sidebar-text px-0 py-0 text-sm-left text-center"
+                                   href="#">
+                                    My Account
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- All Content -->
+        <main role="main" class="col-10 pt-3 px-4 main-background">
+            <div class="py-3 pt-md-4 pb-md-4 mx-auto Page-header">
+                <span id="welcome-message"></span>
+                <span class="d-none d-lg-inline">
+                    Here is a summary of your account.
+                </span>
+                <p class="mt-3 d-lg-none d-sm-block">
+                    Here is a summary of your account.
+                </p>
+            </div>
+
+            <!-- Content : Cards -->
+            <div class="row">
+                <div class="col-md mb-4">
+                    <div class="card CardStyle h-100">
+                        <div class="card-body px-5 py-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <img class="card-img"
+                                         src="img/dashboardCardIcons/AmountDue.png" />
+                                </li>
+                                <li id="total-amount-due" class="Card-header">@Model.TotalDue</li>
+                                <li class="Card-text">Total amount due</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md mb-4">
+                    <div class="card CardStyle h-100">
+                        <div class="card-body px-5 py-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <img class="card-img"
+                                         src="img/dashboardCardIcons/Invoices.png" />
+                                </li>
+                                <li id="open-invoices" class="Card-header">@Model.OpenInvoices</li>
+                                <li class="Card-text">Open Invoices</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md mb-4">
+                    <div class="card CardStyle h-100">
+                        <div class="card-body px-5 py-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <img class="card-img"
+                                         src="img/dashboardCardIcons/SalesOrders.png" />
+                                </li>
+                                <li id="open-sales-orders" class="Card-header"></li>
+                                <li class="Card-text">Open sales orders</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md mb-4">
+                    <div class="card CardStyle h-100">
+                        <div class="card-body px-5 py-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <img class="card-img"
+                                         src="img/dashboardCardIcons/Credits.png" />
+                                </li>
+                                <li id="total-credits" class="Card-header"></li>
+                                <li class="Card-text">Total credits</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md mb-4">
+                    <div class="card CardStyle h-100">
+                        <div class="card-body px-5 py-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <img class="card-img"
+                                         src="img/dashboardCardIcons/AutoPay.png" />
+                                </li>
+                                <li id="auto-pay" class="Card-header"></li>
+                                <li class="Card-text">Auto pay</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content : Invoices List -->
+            <div class="card d-none d-lg-block Invoices-list">
+                <div class="card-body">
+                    <div class="d-inline">
+                        <img class="step-img mr-3" src="img/Step1.png" />
+                        <span class="card-title">Select invoices to pay.</span>
+                    </div>
+
+                    <div class="table-responsive my-4">
+                        <div></div>
+                        <table class="table table-bordered table-striped table-sm">
+                            <thead>
+                                <tr class="spacer">
+                                    <th colspan="9"></th>
+                                </tr>
+                                <tr class="spacer">
+                                    <th colspan="9"></th>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <th class="table-header-styling py-2">Invoice #</th>
+                                    <th class="table-header-styling py-2">
+                                        Date <img class="ml-2" src="img/caret-bottom.svg" />
+                                    </th>
+                                    <th class="table-header-styling py-2">
+                                        Due Date <img class="ml-2" src="img/caret-bottom.svg" />
+                                    </th>
+                                    <th class="table-header-styling py-2">
+                                        Invoice Total
+                                        <img class="ml-2" src="img/caret-bottom.svg" />
+                                    </th>
+                                    <th class="table-header-styling py-2">
+                                        Amount Due
+                                        <img class="ml-2" src="img/caret-bottom.svg" />
+                                    </th>
+                                    <th class="table-header-styling py-2">Terms</th>
+                                    <th class="table-header-styling py-2">
+                                        Description
+                                        <img class="ml-2" src="img/caret-bottom.svg" />
+                                    </th>
+                                    <th class="table-header-styling py-2">PO #</th>
+                                </tr>
+                                @foreach (var inv in @Model.Invoices)
+                                {
+                                    <tr>
+                                        <th></th>
+                                        <th>@inv.InvoiceNumber</th>
+                                        <th>
+                                            @Html.DisplayFor(modelItem => @inv.InvoiceDate)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayFor(modelItem => @inv.DueDate)
+                                        </th>
+                                        <th>
+                                            @inv.Total
+                                        </th>
+                                        <th>
+                                            @inv.AmountDue
+                                        </th>
+                                        <th>@inv.Terms</th>
+                                        <th>
+                                            @inv.Description
+                                        </th>
+                                        <th>@inv.PONumber</th>
+                                    </tr>
+                                }
+                            </thead>
+                            <tbody id="invoices-table-body"></tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
+                        <span id="invoices-selected"></span>
+                        <span id="total-payment-amount"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content: Payments -->
+            <div class="py-5 d-none d-lg-block">
+                <div class="row">
+                    <!-- Content : Payment Method -->
+                    <div class="col-sm-7">
+                        <div class="card Payment-method h-100">
+                            <div class="card-body">
+                                <div class="d-inline">
+                                    <img class="step-img mr-3" src="img/Step2.png" />
+                                    <span class="card-title">Select a payment method</span>
+                                    <span class="float-right" data-toggle="modal" data-target="#exampleModal">Manage Payment Methods</span>
+                                </div>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">My Saved Payment Methods</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div>
+                                                    <nav class="nav">
+                                                        <a class="nav-link active" href="#">Credit Cards</a>
+                                                        <a class="nav-link" href="#">ACH Accounts</a>
+                                                    </nav>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-4">
+                                                        <ul class="list-group">
+                                                            <li class="list-group-item-action">
+                                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                                                </svg>&nbsp;Add New Card
+                                                            </li>
+                                                            <li class="list-group-item"><div class="float-left"><img width="150" height="108" src="~/img/Mastercard.png" /><div class="float-right">ending in 2244<br />*Main Debit*</div></div></li>
+                                                            <li class="list-group-item"><img src="~/img/Mastercard.png" /></li>
+                                                            <li class="list-group-item"><img src="~/img/Mastercard.png" /></li>
+                                                            <li class="list-group-item"><img src="~/img/Mastercard.png" /></li>
+                                                            <li class="list-group-item"><img src="~/img/Mastercard.png" /></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-row align-items-start" style="height:500px">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label for="CardNumber">Card Number *</label>
+                                                                    <input type="text" class="form-control" id="CardNumber" required placeholder="xxxxxxxxxxxxxXXXX">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="NameOnCard">Name on Card *</label>
+                                                                    <input type="text" class="form-control" id="NameOnCard" placeholder="Ashley Johnson">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="ExpirationDateMonth">Expiration Date *</label>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4">
+                                                                            <input type="number" min="1" max="12" class="form-control" id="ExpirationDateMonth" placeholder="03">
+                                                                        </div>
+                                                                        <div class="col-sm-4">
+                                                                            <input type="number" min="21" max="31" class="form-control" id="ExpirationDateYear" placeholder="23">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label for="BillingAddress">Billing Address *</label>
+                                                                    <input type="text" class="form-control" id="BillingAddress" placeholder="123 Sunshine Lane">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="col">
+                                                                        <label for="PostalCode">Zip Code / Postal Code *</label>
+                                                                        <input type="text" class="form-control" id="PostalCode" required placeholder="098345">
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <label for="PrimaryCard">Card Nickname</label>
+                                                                        <input type="text" class="form-control" id="PrimaryCard" placeholder="Primary Card">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row align-items-end">
+                                                            <div class="col"><button type="button" class="btn btn-outline-danger float-left">Delete Card</button></div>
+                                                            <div class="col"><button type="button" class="btn btn-outline-primary float-lg-right">Save Changes</button></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="nav nav-tabs my-5">
+                                        <li class="nav-item">
+                                            <span id="by-credit-card"
+                                                  class="nav-link active"
+                                                  href="#">
+                                                Pay by Credit Card
+                                            </span>
+                                        </li>
+                                        <li class="nav-item">
+                                            <span id="by-bank-account" class="nav-link" href="#">
+                                                Pay with Bank Account
+                                            </span>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="nav card-selector">
+                                        <li class="nav-item">
+                                            <span class="nav-link active px-0 py-2 mx-3" href="#">Saved Card</span>
+                                        </li>
+                                        <li class="nav-item">
+                                            <span id="new-card"
+                                                  class="nav-link px-0 py-2 mx-3"
+                                                  href="#">
+                                                New Card
+                                            </span>
+                                        </li>
+                                    </ul>
+
+                                    <form id="saved-card-form" class="container mt-5">
+                                        <div class="form-group">
+                                            <label for="credit-cards">
+                                                Saved Card *
+                                            </label>
+                                            <select class="form-control saved-card-dropdown"
+                                                    id="credit-cards">
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputSecurityCode">
+                                                Security Code (CVV2 / CVC)
+                                            </label>
+                                            <input type="text"
+                                                   class="form-control security-code"
+                                                   id="inputSecurityCode" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content : Review Payment Summary -->
+                        <div class="col-sm-5">
+                            <div class="card Payment-summary h-100">
+                                <div class="card-body">
+                                    <div class="d-inline">
+                                        <img class="step-img mr-3" src="img/Step3.png" />
+                                        <span class="card-title">Review payment summary</span>
+                                    </div>
+
+                                    <div id="payment-summary-text"
+                                         class="border-bottom my-5 pb-5">
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                # of invoices selected:
+                                            </div>
+                                            <div class="col-sm d-flex justify-content-end">
+                                                0
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                Invoice payment amount:
+                                            </div>
+                                            <div class="col-sm d-flex justify-content-end">
+                                                $0.00
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                3% card convenience fee:
+                                            </div>
+                                            <div class="col-sm d-flex justify-content-end">
+                                                $0.00
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="total-payment-amount" class="container mt-4 mb-5">
+                                        <div class="row">
+                                            <div class="col-sm-9 px-0">
+                                                Total payment amount:
+                                            </div>
+                                            <div class="col-sm-3 d-flex justify-content-end px-0">
+                                                $0.00
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button id="pay-now-btn"
+                                            type="button"
+                                            class="btn btn-primary btn-lg btn-block mt-4 py-2">
+                                        Pay Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Make Payment Button -->
+                <div class="d-lg-none">
+                    <button id="make-payment-btn"
+                            type="button"
+                            class="btn btn-primary btn-lg btn-block mx-0 mt-3 mb-5">
+                        Make Payment
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - MVC_Bootstrap_Demo - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

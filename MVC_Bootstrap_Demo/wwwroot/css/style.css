@@ -1,0 +1,430 @@
+@font-face {
+  font-family: AvenirNext-Bold;
+  src: url(fonts/AvenirNextLTPro-Bold.ttf);
+}
+
+@font-face {
+  font-family: AvenirNext-Demi;
+  src: url(fonts/AvenirNextLTPro-Demi.ttf);
+}
+
+@font-face {
+  font-family: AvenirNext-Regular;
+  src: url(fonts/AvenirNextLTPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: AvenirNext-UltraLight;
+  src: url(fonts/AvenirNextLTPro-UltLt.ttf);
+}
+
+@font-face {
+  font-family: AvenirNext-Medium;
+  src: url(fonts/AvenirNextLTPro-Medium.ttf);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#title {
+  margin: 0 auto;
+}
+
+.company-logo {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.navbar-styling {
+  height: 73px;
+  box-shadow: 0 2px 4px 0 rgba(145, 158, 171, 0.2);
+  border: solid 1px rgba(145, 158, 171, 0.4);
+  background-color: #ffffff;
+}
+
+.John-Doe-Manufacturi {
+  width: 155px;
+  height: 23px;
+  font-family: AvenirNext-Demi;
+  font-size: 17px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5e7382;
+}
+
+.Merchant {
+  width: 96px;
+  height: 19px;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  font-family: AvenirNext;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5e7382;
+}
+
+.Store {
+  width: 45px;
+  height: 16px;
+  font-family: AvenirNext;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #637381;
+}
+
+.nav-dropdown {
+  background: transparent;
+}
+
+.Page-header {
+  font-family: AvenirNext-Regular;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212b36;
+}
+
+.CardStyle {
+  border-radius: 14px;
+  box-shadow: 0 3px 6px 0 rgba(194, 199, 203, 0.3);
+  border: solid 1px #c4cdd5;
+  background-color: #ffffff;
+}
+
+.Card-text {
+  font-family: AvenirNext-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212b36;
+}
+
+.Card-header {
+  font-family: AvenirNext-UltraLight;
+  font-size: 28px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.card-img {
+  width: 36px;
+  height: 36px;
+}
+
+.main-background {
+  background-color: #f4f6f8;
+}
+
+.SideBar {
+  padding: 0;
+  box-shadow: 0 4px 9px 0 rgba(145, 158, 171, 0.49);
+  background-color: #637381;
+}
+
+.sidebar-text {
+  height: 1.7vw;
+  font-family: AvenirNext-Demi;
+  font-size: calc(0.3rem + 0.65vw);
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.sidebar-img {
+  width: calc(0.8rem + 0.85vw);
+  height: calc(0.8rem + 0.9vw);
+}
+
+.SideBar .row.active {
+  background-color: #919eab;
+  border-left: 5px solid #ffffff;
+}
+
+.SideBar .nav-link:hover {
+  text-decoration: none;
+  color: #fff !important;
+}
+
+.Invoices-list {
+  border-radius: 14px;
+  box-shadow: 0 3px 6px 0 rgba(194, 199, 203, 0.3);
+  background-color: #ffffff;
+}
+
+.card-title {
+  font-family: AvenirNext-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212b36;
+}
+
+.step-img {
+  width: 20px;
+  height: 20px;
+}
+
+.table-header-styling {
+  font-family: AvenirNext-Demi;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212b36;
+}
+
+#invoices-selected {
+  font-family: AvenirNext-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+#total-payment-amount {
+  font-family: AvenirNext-UltraLight;
+  font-size: 28px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: right;
+  color: #000000;
+}
+
+#invoices-table-body {
+  font-family: AvenirNext-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212b36;
+}
+
+.table-row-styling {
+  margin-top: 10px;
+}
+
+.Payment-method {
+  border-radius: 14px;
+  box-shadow: 0 3px 6px 0 rgba(194, 199, 203, 0.3);
+  background-color: #ffffff;
+}
+
+.Payment-summary {
+  border-radius: 14px;
+  box-shadow: 0 3px 6px 0 rgba(194, 199, 203, 0.3);
+  background-color: #ffffff;
+}
+
+.saved-card-dropdown {
+  height: 36px;
+  width: 300px;
+}
+
+.security-code {
+  height: 36px;
+  width: 115px;
+}
+
+.card-selector .nav-item .nav-link.active {
+  border-bottom: 5px solid #0ae0ed;
+  font-family: AvenirNext-Demi;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212b36;
+}
+
+.card-selector .nav-item {
+  width: 120px;
+}
+
+#new-card {
+  font-family: AvenirNext-Regular;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212b36;
+}
+
+#by-credit-card {
+  font-family: AvenirNext-Bold;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212b36;
+}
+
+#by-bank-account {
+  font-family: AvenirNext-Regular;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212b36;
+}
+
+#saved-card-form {
+  font-family: AvenirNext-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212b36;
+}
+
+#payment-summary-text {
+  font-family: AvenirNext-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.86;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212b36;
+}
+
+#total-payment-amount {
+  font-family: AvenirNext-UltraLight;
+  font-size: 28px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+#pay-now-btn {
+  font-family: AvenirNext-Demi;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+#user-name {
+  font-family: AvenirNext-Demi;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5e7382;
+}
+
+#log-out {
+  font-family: AvenirNext-Medium;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #637381;
+}
+
+#make-payment-btn {
+  font-family: AvenirNext-Demi;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.spacer {
+  background-color: #f4f6f8;
+  border: none;
+  height: 30px;
+}
+
+.table > thead > tr:first-child > th {
+  border: none;
+}
+
+.table > thead > tr:nth-child(2) > th {
+  border: none;
+}
+
+.table-responsive {
+  width: 99%;
+}
